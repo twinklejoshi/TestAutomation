@@ -1,0 +1,7 @@
+ <suite name='DemoRealtorTest'>
+ <test name="realtorTest">
+ <classes>
+ <class name="Tests.RealtorTests" />
+ </classes>
+ </test>
+</suite>
