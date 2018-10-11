@@ -8,7 +8,7 @@ import org.testng.annotations.BeforeMethod;
 public class BaseTest {
 
 	protected WebDriver driver;
-	String webUrl = "https://www.realtor.com";
+	String webUrl = "https://www.realtor.com/";
 
 	@BeforeMethod
 	public void initializeSettings() {

@@ -16,17 +16,17 @@ public class RealEstateAndHomesDetailPage extends BasePageObject<RealEstateAndHo
 	}
 
 	// region WebElements
-	WebElement propertyType = driver.findElement(By.xpath(
+	WebElement propertyType = GetElementAfterWait(driver, By.xpath(
 			"(//section[@id='aj-qv-property-indicators']//div//li//div[@data-toggle='tooltip']//span[@class='font-semibold value ellipsis'])[1]"));
-	WebElement price = driver.findElement(By.xpath("//div[@itemid='#offer']//span"));
+	WebElement price = GetElementAfterWait(driver, By.xpath("//div[@itemid='#offer']//span"));
 
 	WebElement propertyDetails(int i) {
-		return driver.findElement(
+		return GetElementAfterWait(driver,
 				By.xpath(String.format("//ul[@class='property-meta list-horizontal list-unstyled']//li[%d]//span", i)));
 	}
 
-	WebElement address = driver.findElement(By.xpath("//h2[@class='address']"));
-	WebElement locationTxt = driver.findElement(By.id("searchBox"));
+	WebElement address = GetElementAfterWait(driver, By.xpath("//h2[@class='address']"));
+	WebElement locationTxt = GetElementAfterWait(driver, By.id("searchBox"));
 
 	// endregion
 

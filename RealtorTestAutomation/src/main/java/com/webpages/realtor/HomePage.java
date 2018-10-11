@@ -12,9 +12,9 @@ public class HomePage extends BasePageObject<HomePage> {
 	}
 
 	// region WebElements
-	WebElement searchTxtBox = driver.findElement(By.id("searchBox"));
-	WebElement searchBtn = driver
-			.findElement(By.xpath("//button[@class='btn btn-primary js-searchButton ']/span[text()='Search']"));
+	WebElement searchTxtBox = GetElementAfterWait(driver, By.id("searchBox"));
+	WebElement searchBtn = GetElementAfterWait(driver,
+			By.xpath("//button[@class='btn btn-primary js-searchButton ']/span[text()='Search']"));
 	// endregion
 
 	// region Methods

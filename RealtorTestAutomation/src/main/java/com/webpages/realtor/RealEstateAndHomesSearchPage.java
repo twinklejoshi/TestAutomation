@@ -16,32 +16,32 @@ public class RealEstateAndHomesSearchPage extends BasePageObject<RealEstateAndHo
 	}
 
 	// region WebElements
-	WebElement searchResultCount = driver.findElement(By.id("search-result-count"));
+	WebElement searchResultCount = GetElementAfterWait(driver, By.id("search-result-count"));
 
 	WebElement resultItem(String number) {
-		return driver.findElement(By.xpath(String.format("//li[@id='%s']//img", number)));
+		return GetElementAfterWait(driver, By.xpath(String.format("//li[@id='%s']//img", number)));
 	}
 
 	WebElement price(String number) {
-		return driver.findElement(By.xpath(String.format(
+		return GetElementAfterWait(driver, By.xpath(String.format(
 				"//li[@id='%s']//div[@class='card-box js-navigate-to js-record-user-activity']//div[@class='detail-wrap ']//div//div[@class='price']//span",
 				number)));
 	}
 
 	WebElement numberOfBeds(String number) {
-		return driver.findElement(By.xpath(String.format(
+		return GetElementAfterWait(driver, By.xpath(String.format(
 				"//li[@id='%s']//div[@class='card-box js-navigate-to js-record-user-activity']//div[@class='detail-wrap ']//ul[@class='prop-meta ellipsis']//li[@data-label='property-meta-beds']//span",
 				number)));
 	}
 
 	WebElement numberOfBaths(String number) {
-		return driver.findElement(By.xpath(String.format(
+		return GetElementAfterWait(driver, By.xpath(String.format(
 				"//li[@id='%s']//div[@class='card-box js-navigate-to js-record-user-activity']//div[@class='detail-wrap ']//ul[@class='prop-meta ellipsis']//li[@data-label='property-meta-baths']//span",
 				number)));
 	}
 
 	WebElement numberOfSqft(String number) {
-		return driver.findElement(By.xpath(String.format(
+		return GetElementAfterWait(driver, By.xpath(String.format(
 				"//li[@id='%s']//div[@class='card-box js-navigate-to js-record-user-activity']//div[@class='detail-wrap ']//ul[@class='prop-meta ellipsis']//li[@data-label='property-meta-sqft']//span",
 				number)));
 	}
